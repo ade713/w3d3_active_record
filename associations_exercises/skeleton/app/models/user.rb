@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
     through: :enrollments,
     source: :course
 
+  has_many :instructors,
+    through: :enrolled_courses,
+    source: :instructor
 end
